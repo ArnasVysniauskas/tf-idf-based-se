@@ -9,8 +9,8 @@ Light tf-idf based fuzzy-matching search engine with no external dependencies fo
     `poetry install`
 3. Run the tool with your data:
     `python fuzzy_tests/fuzzy_v1.py --source link_items.csv --gram 1 --depth -1`
-
-    [source] - .csv file containing your data in main project directory
+```
+    [source] - .csv file containing your data in main directory
     [gram]   - (default = 1) how finelly slice (tokenize) the word
         gram = 1: "amazon" -> ["amazon"] (does nothing)
         gram = 2: "amazon" -> ["am", "ma", "az", "zo", "on"]
@@ -23,7 +23,7 @@ Light tf-idf based fuzzy-matching search engine with no external dependencies fo
         depth =  2: takes two tokens, and checks for the matches,
                     ignores similarity increase from other less important tokens
         ...
-
+```
 # Hard-coded config:
 
 1. String into tokens separators: ["_", " ", "."]
